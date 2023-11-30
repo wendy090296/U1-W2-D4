@@ -33,8 +33,7 @@ const crazyDiff = function (num1) {
     return num1 - 19;
   }
 };
-console.log(); // DA TERMINARE
-
+console.log(crazyDiff(25));
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
@@ -47,9 +46,8 @@ const boundary = function (n) {
     return false;
   }
 };
-const myResult = boundary();
 
-console.log(myResult);
+console.log(boundary(400));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -61,13 +59,13 @@ console.log(myResult);
 
 const epify = function (ciao) {
   if (ciao !== "EPICODE") {
-    return ciao.concat("EPICODE");
+    return "EPICODE ".concat(ciao);
   } else {
     return ciao;
   }
 };
-const result = epify();
-console.log(result); // DA RIVEDERE
+const result = epify("ciao sono wendy");
+console.log(result);
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -83,40 +81,31 @@ const check3and7 = function (num5) {
 };
 const result1 = check3and7(69);
 
-console.log("il parametro della funzione é", result1); // DA RIVEDERE
+console.log("il parametro della funzione é", result1);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-const reverseString = function (EPICODE) {
-  let array = string.split("");
-  let arrayReverse = array.reverse();
-  let result = arrayReverse.join("");
-
-  return result;
+const reverseString = function (str) {
+  const arrayOfChars = str.split("");
+  arrayOfChars.reverse();
+  const reversedString = arrayOfChars.join("");
+  return reversedString;
 };
-console.log(reverseString("EPICODE"));
+console.log(reverseString("epicode"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-const upperFirst = function (epicode) {
-  const words = inputString.split(" ");
-  const upperCasedWords = word.charAt(0).toUpperCase() + word.slice(1);
-  const resultString = uppercasedWords.join(" ");
-  return resultString;
-};
-console.log(result);
+const upperFirst = function (epicode) {};
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
-
-const cutString = function () {};
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
