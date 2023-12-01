@@ -88,19 +88,30 @@ console.log("il parametro della funzione é", result1);
 */
 
 const reverseString = function (str) {
-  const arrayOfChars = str.split("");
-  arrayOfChars.reverse();
-  const reversedString = arrayOfChars.join("");
+  const arrayOfChars = str.split(""); // converto la stringa EPICODE in un array di caratteri: ['E', 'P', 'I', 'C', 'O', 'D', 'E']
+  arrayOfChars.reverse(); // INVERTIAMO L'ARRAY
+  const reversedString = arrayOfChars.join(""); // RIUNIAMO L'ARRAY IN UNA STRINGA!!
   return reversedString;
 };
-console.log(reverseString("epicode"));
+console.log(reverseString("EPICODE"));
 
 /* ESERCIZIO 8
+
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
+const upperFirst = function (sentence) {
+  const arrayOfWords = sentence.split(" ");
 
-const upperFirst = function (epicode) {};
+  const arrayOfUppercasedWords = [];
+  for (let i = 0; i < arrayOfWords.length; i++) {
+    let uppercasedWord =
+      arrayOfWords[i].slice(0, 1).toUpperCase() + arrayOfWords[i].slice(1);
+    arrayOfUppercasedWords.push(uppercasedWord);
+  }
+  return arrayOfUppercasedWords.join;
+};
+console.log(upperFirst("ciao mi chiamo wendy"));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
